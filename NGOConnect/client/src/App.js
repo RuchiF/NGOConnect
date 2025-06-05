@@ -10,6 +10,7 @@ import DashboardVolunteer from "./pages/DashboardVolunteer";
 import DashboardAdmin from "./pages/DashboardAdmin";
 import { getUser, isLoggedIn } from "./utils";
 import Profile from "./pages/Profile";
+import Leaderboard from "./components/Leaderboard";
 function ProtectedRoute({ children, role }) {
   const user = getUser();
   if (!isLoggedIn()) return <Navigate to="/auth" />;
@@ -59,6 +60,7 @@ function App() {
           }
         />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/ngo/leaderboard" element={<Leaderboard />} />
       </Routes>
     </div>
   );

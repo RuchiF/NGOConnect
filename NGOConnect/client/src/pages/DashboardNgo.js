@@ -4,7 +4,6 @@ import { getUser } from "../utils";
 import styles from "./DashboardNgo.module.css";
 import Sidebar from "../components/Sidebar";
 import AnalyticsChart from "../components/AnalyticsChart";
-import Leaderboard from "../components/Leaderboard"; // <-- Import Leaderboard
 
 // DashboardCard component for analytics
 const DashboardCard = ({ label, value }) => (
@@ -156,9 +155,6 @@ const DashboardNgo = () => {
               }
             />
           </div>
-
-          {/* Leaderboard */}
-          <Leaderboard />
 
           {/* Analytics Chart */}
           <AnalyticsChart events={events} />

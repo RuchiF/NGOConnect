@@ -12,7 +12,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { to: "/ngo", icon: <FaHome />, label: "Dashboard" },
-  // ...other links...
+  // Add other links as needed
   { to: "/ngo/leaderboard", icon: <FaTrophy />, label: "Leaderboard" },
   { to: "/ngo/profile", icon: <FaUser />, label: "Profile" },
 ];

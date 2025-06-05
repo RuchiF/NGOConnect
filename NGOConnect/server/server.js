@@ -10,7 +10,6 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const eventRoutes = require("./routes/event");
 const adminRoutes = require("./routes/admin");
-const volunteerRoutes = require("./routes/volunteer");
 const app = express();
 const PORT = process.env.PORT || 5000;
 

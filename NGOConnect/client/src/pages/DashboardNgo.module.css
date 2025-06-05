@@ -1,0 +1,114 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.header {
+  font-size: 2rem;
+  color: #0A66C2;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.formSection {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.formTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #0A66C2;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9fafb;
+}
+
+.textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.btnPrimary {
+  width: 100%;
+  background: #0A66C2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(10,102,194,0.08);
+  transition: background 0.2s;
+}
+
+.btnPrimary:disabled {
+  background: #b3d3f7;
+  cursor: not-allowed;
+}
+
+.textSuccess {
+  color: #22c55e;
+  margin-bottom: 8px;
+}
+
+.textError {
+  color: #ef4444;
+  margin-bottom: 8px;
+}
+
+.eventList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eventCard {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.eventTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0A66C2;
+  margin-bottom: 4px;
+}
+
+.eventMeta {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.volList {
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 12px 2px;
+  }
+  .formSection, .eventCard {
+    padding: 12px;
+  }
+}

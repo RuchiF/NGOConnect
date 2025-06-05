@@ -1,0 +1,168 @@
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+  background: #f4f6f8;
+  padding: 40px 0;
+}
+
+.profileMain {
+  flex: 1;
+  min-height: 100vh;
+  background: #f4f6f8;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profileCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(10, 102, 194, 0.1);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw; /* Make it nearly full width */
+  max-width: 1200px;
+  margin-bottom: 32px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.08);
+}
+
+.name {
+  color: #0a66c2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.info {
+  color: #22223b;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.aboutSection {
+  margin-top: 24px;
+  text-align: center;
+}
+.aboutSection h3 {
+  color: #0a66c2;
+  margin-bottom: 8px;
+}
+.aboutSection p {
+  color: #444;
+  font-size: 1rem;
+}
+
+.carouselSection {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(10, 102, 194, 0.1);
+  padding: 32px 24px;
+  width: 90vw; /* Make it nearly full width */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.carouselBtn {
+  background: #0a66c2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  margin: 0 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carouselBtn:hover {
+  background: #084a8c;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.testimonialAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.08);
+}
+
+.testimonialText {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.testimonialName {
+  color: #0a66c2;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.profileContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+.profileSidebar {
+  /* Optional: for custom sidebar styling if needed */
+}
+
+.profileMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profileCard,
+.carouselSection {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(10, 102, 194, 0.1);
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ...rest of your styles remain unchanged... */

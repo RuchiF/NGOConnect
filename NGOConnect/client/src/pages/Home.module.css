@@ -1,0 +1,155 @@
+.homeWrapper {
+  min-height: 100vh;
+  background: #f3f6f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0 32px 0;
+  background: linear-gradient(90deg, #eaf1fb 60%, #f3f6f9 100%);
+}
+
+.heroContent {
+  max-width: 500px;
+  margin-right: 40px;
+  padding: 24px;
+}
+
+.brand {
+  color: #0a66c2;
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+.heroContent h1 {
+  font-size: 2.7rem;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.heroContent p {
+  color: #444;
+  font-size: 1.2rem;
+  margin-bottom: 28px;
+}
+
+.highlight {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.heroActions {
+  display: flex;
+  gap: 18px;
+}
+
+.btnPrimary {
+  background: #0a66c2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btnPrimary:hover {
+  background: #084a8c;
+}
+
+.btnSecondary {
+  background: #fff;
+  color: #0a66c2;
+  border: 2px solid #0a66c2;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btnSecondary:hover {
+  background: #eaf1fb;
+  color: #084a8c;
+}
+
+.heroImage img {
+  width: 350px;
+  max-width: 90vw;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(10,102,194,0.10);
+}
+
+.featuresSection {
+  padding: 48px 0 32px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.featuresSection h2 {
+  color: #0a66c2;
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.featuresGrid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.featureCard {
+  background: #f3f6f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.06);
+  padding: 32px 24px;
+  width: 260px;
+  min-width: 220px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.featureCard:hover {
+  box-shadow: 0 4px 24px rgba(10,102,194,0.13);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  padding: 24px 0 12px 0;
+  text-align: center;
+  color: #444;
+  margin-top: auto;
+}
+
+.footerLinks {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footerLinks a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footerLinks a:hover {
+  color: #084a8c;
+}

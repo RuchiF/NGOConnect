@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%; /* Ensures it never exceeds viewport width */
+  max-width: 100%;
+  box-sizing: border-box;
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+.logo {
+  color: #0a66c2;
+  font-weight: 700;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+.title {
+  font-size: 1.1rem;
+  color: #22223b;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.logoutBtn {
+  background: #0a66c2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.logoutBtn:hover {
+  background: #084a8c;
+}

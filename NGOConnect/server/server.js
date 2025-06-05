@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 const ngoRoutes = require("./routes/ngo");
 const analyticsRoutes = require("./routes/analytics");
+const volunteerRoutes = require("./routes/volunteer");
 
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
@@ -36,6 +37,8 @@ app.use("/api/analytics", analyticsRoutes);
 
 // ...existing code...
 app.use("/api/ngo", ngoRoutes);
+app.use("/api/volunteer", volunteerRoutes);
+// In server.js
 app.use("/api/volunteer", volunteerRoutes);
 // Start server
 app.listen(PORT, () => {

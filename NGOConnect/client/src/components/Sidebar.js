@@ -1,11 +1,19 @@
 import React, { useState } from "react";
-import { FaHome, FaCalendarAlt, FaUsers, FaUser, FaBars } from "react-icons/fa";
+import {
+  FaHome,
+  FaCalendarAlt,
+  FaUsers,
+  FaUser,
+  FaBars,
+  FaTrophy,
+} from "react-icons/fa";
 import styles from "./Sidebar.module.css";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { to: "/ngo", icon: <FaHome />, label: "Dashboard" },
   // ...other links...
+  { to: "/ngo/leaderboard", icon: <FaTrophy />, label: "Leaderboard" },
   { to: "/ngo/profile", icon: <FaUser />, label: "Profile" },
 ];
 

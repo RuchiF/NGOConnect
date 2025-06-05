@@ -15,15 +15,17 @@ router.get("/ngo/:id", async (req, res) => {
     }
 
     // Get all events created by this NGO
-    const events = await Event.find({ ngo: ngoId }).populate("registeredVolunteers");
+    const events = await Event.find({ ngo: ngoId }).populate(
+      "registeredVolunteers"
+    );
 
     // Total events
     const totalEvents = events.length;
 
     // Total unique volunteers across all events
     const volunteerSet = new Set();
-    events.forEach(event => {
-      (event.registeredVolunteers || []).forEach(vol => {
+    events.forEach((event) => {
+      (event.registeredVolunteers || []).forEach((vol) => {
         if (vol && vol._id) volunteerSet.add(vol._id.toString());
       });
     });
@@ -32,7 +34,7 @@ router.get("/ngo/:id", async (req, res) => {
     // Most popular event (by number of registered volunteers)
     let mostPopularEvent = null;
     let maxVolunteers = -1;
-    events.forEach(event => {
+    events.forEach((event) => {
       const count = (event.registeredVolunteers || []).length;
       if (count > maxVolunteers) {
         maxVolunteers = count;
@@ -49,6 +51,31 @@ router.get("/ngo/:id", async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({ message: "Failed to fetch analytics." });
+  }
+});
+
+// GET /api/analytics/leaderboard
+router.get("/leaderboard", async (req, res) => {
+  try {
+    // Find all volunteers
+    const volunteers = await User.find({ role: "volunteer" })
+      .populate("registeredEvents")
+      .lean();
+
+    // Sort by number of registered events (descending)
+    const leaderboard = volunteers
+      .map((v) => ({
+        _id: v._id,
+        name: v.name,
+        email: v.email,
+        eventsCount: v.registeredEvents ? v.registeredEvents.length : 0,
+      }))
+      .sort((a, b) => b.eventsCount - a.eventsCount)
+      .slice(0, 10); // Top 10
+
+    res.json({ leaderboard });
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch leaderboard." });
   }
 });
 

@@ -4,6 +4,7 @@ import { getUser } from "../utils";
 import styles from "./DashboardNgo.module.css";
 import Sidebar from "../components/Sidebar";
 import AnalyticsChart from "../components/AnalyticsChart";
+import Leaderboard from "../components/Leaderboard"; // <-- Import Leaderboard
 
 // DashboardCard component for analytics
 const DashboardCard = ({ label, value }) => (
@@ -70,7 +71,6 @@ const DashboardNgo = () => {
   const fetchStats = async () => {
     try {
       const res = await api.get(`/analytics/ngo/${user._id}`);
-      console.log("Analytics API response:", res.data);
       setStats(res.data);
     } catch (err) {
       setStats({ totalEvents: 0, totalVolunteers: 0, mostPopularEvent: null });
@@ -156,6 +156,9 @@ const DashboardNgo = () => {
               }
             />
           </div>
+
+          {/* Leaderboard */}
+          <Leaderboard />
 
           {/* Analytics Chart */}
           <AnalyticsChart events={events} />
